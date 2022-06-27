@@ -29,8 +29,8 @@
         >
         <nav>
           <ul class="site-nav list">
-            <li class="item"><a href="./index.html" class="link current">Студия</a></li>
-            <li class="item"><a href="./portfolio.html" class="link">Портфолио</a></li>
+            <li class="item"><a href="./index.html" class="link current-link">Студия</a></li>
+            <li class="item"><a href="./portfolio.html" class="link ">Портфолио</a></li>
             <li class="item"><a href="" class="link">Контакты</a></li>
           </ul>
         </nav>
@@ -54,7 +54,7 @@
       <section class="hero">
         <div class="hero-conteiner">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button type="button" class="hero-btn">Заказать услугу</button>
+          <button class="hero-btn" type="button" data-modal-open>Заказать услугу</button>
         </div>
       </section>
       <!-- Features -->
@@ -120,18 +120,27 @@
         <div class="container">
           <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="work list">
-            <li class="item">
-              <img src="./images/works/img.box-1.jpg" alt="разработчик пишет код" width="370" />
+            <li class="work-descr item">
+              <img class="work-descr-img" src="./images/works/img.box-1.jpg" alt="разработчик пишет код" width="370" />
+              <div class="text">
+                <p>Десктопные приложения</p>
+              </div>
             </li>
-            <li class="item">
-              <img
+            <li class="work-descr item">
+              <img class="work-descr-img"
                 src="./images/works/img.box-2.jpg"
                 alt="проверка показа сайта на мобильных устройствах"
                 width="370"
               />
+              <div class="text">
+                <p>Мобильные приложения</p>
+              </div>
             </li>
-            <li class="item">
-              <img src="./images/works/img.box-3.jpg" alt="выбор цветовой палитры" width="370" />
+            <li class="work-descr item">
+              <img class="work-descr-img" src="./images/works/img.box-3.jpg" alt="выбор цветовой палитры" width="370" />
+              <div class="text">
+                <p>Дизайнерские решения</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -392,5 +401,17 @@
           </div>
         </div>
     </footer>
+    <!-- Modal window -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-close-btn" data-modal-close >
+          <svg class="close-icon" width="18" height="18">
+            <use href="./images/close.svg"</use>
+          </svg>Close</button>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, saepe.</p>
+        
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
